@@ -1,7 +1,7 @@
 # sgf_artist
 Draw Go stones and labels using the Python Image Library.
 
-Run **textbook_artist.py** on one SGF branch. Modify **file_artist.py** or **folder_artist.py** to run on whole file.
+Run **textbook_artist.py** on one SGF branch. Modify **file_artist.py** or **folder_artist.py** to run on whole file. See artist_test for example.
 
 ## Scripts
 textbook_artist.py defines the Branch class storing each branch.  
