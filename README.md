@@ -2,7 +2,7 @@
 Draw Go stones and labels using the Python Image Library.
 
 Sample image  
-<img src="test.jpg" alt="drawing" width="200"/>
+<img src="test.jpg" alt="drawing" width="500"/>
 
 ## Scripts
 goposition.py: defines the class used to store each branch that is read from an SGF file.    
