@@ -2,7 +2,7 @@ import re
 
 
 def get_str(text, key):
-    ''' empty list
+    ''' Returns the list of coordinates.
     '''
     out = ''
     s = key + r'(\[[a-z]{2}\])+([A-Z]|;|\))'
@@ -36,6 +36,8 @@ def get_label(text, key):
 
 
 def get_LB(input_labels):
+    ''' Get all labels, such as triangle, circle, square, and X.
+    '''
     valid_labels = {'TR': 'Triangle', 'CR': 'Circle',
                     'SQ': 'Square', 'MA': 'X', 'L': 'Letter', 'N': 'Number'}
     new_dict = {}  # coord: label type

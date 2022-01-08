@@ -2,7 +2,7 @@ import re
 from helpers import get_str, get_LB
 
 
-class GoPosition:
+class goPosition:
     '''Stores a board position'''
     valid_labels = {'TR': 'Triangle', 'CR': 'Circle',
                     'SQ': 'Square', 'MA': 'X', 'L': 'Letter', 'N': 'Number'}
@@ -44,16 +44,12 @@ class GoPosition:
         return f'\n(;{black}{white}{label}{comment})\n'
 
     @classmethod
-    def from_string(cls, text, size: bool=False, comment: bool=False):
+    def from_string(cls, text, size: int=19, comment: bool=False):
         ''' Constructs the GoPosition class using an SGF string
         '''
         BS = get_str(text, "AB")
         WS = get_str(text, "AW")
         C = re.findall(r'C\[(.+?)\]', text, re.DOTALL)[0] if comment else None
         LB = get_LB(text)
-
-        SIZE = int(re.findall(r'SZ\[(.+?)\]', text, re.DOTALL)[0]) if size else 19
+        SIZE = size
         return cls(BS, WS, C, SIZE, LB)
-
-class SGF:
-    pass

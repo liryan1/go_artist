@@ -39,6 +39,6 @@ for file in folder_path:
 
     # add page numbers to each file
     for i, v in enumerate(text):
-        obj = GoPosition.from_string(v)
+        obj = GoPosition.from_string(v, size=19)
         Draw(obj, fname=fr'{file_dir}\{i+1}.jpg', quality=80, mode=size)
     print(f"Done {file}")

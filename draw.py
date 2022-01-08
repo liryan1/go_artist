@@ -1,5 +1,8 @@
+''' Draw function that takes in a goposition object and outputs a jpg image.
+'''
+
 from PIL import Image, ImageDraw, ImageFont
-from goposition import GoPosition
+from goposition import goPosition
 
 BLACK, WHITE = (0, 0, 0), (255, 255, 255)  # Colors
 LATO = r"C:\Users\Ryan\AppData\Local\Microsoft\Windows\Fonts\Lato-Regular.ttf"
@@ -183,7 +186,7 @@ def Draw(position, fname="problem.jpg", draw_labels=True, mode_change=False,
     if draw_labels:
         for coord, label in position.labels.items():
             if label in ["TR", "CR", "SQ"]:
-                draw_shapes(idraw, coord, shape=GoPosition.valid_labels[label])
+                draw_shapes(idraw, coord, shape=goPosition.valid_labels[label])
             elif label == "MA":
                 draw_text(idraw, coord, text=u"\u2715", FONT=XFONT, scale=1.2)
             else: # number or label
